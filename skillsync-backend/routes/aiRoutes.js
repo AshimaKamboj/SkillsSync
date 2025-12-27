@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const aiController = require("../controllers/aiController");
+const { generatePlan } = require("../controllers/aiController");
+const auth = require("../middleware/authMiddleware");
 
-router.post("/study-plan", aiController.getStudyPlan);
+router.post("/generate-plan", auth, generatePlan);
 
 module.exports = router;

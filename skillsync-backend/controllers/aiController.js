@@ -1,31 +1,33 @@
-const model = require("../config/gemini");
+const client = require("../config/ai");
 const Goal = require("../models/Goal");
 
 exports.generatePlan = async (req, res) => {
   try {
-    const { goalId } = req.body;
-
-    const goal = await Goal.findById(goalId);
+    const goal = await Goal.findById(req.body.goalId);
     if (!goal) return res.status(404).json({ message: "Goal not found" });
 
     const prompt = `
-You are a smart AI learning coach.
+Create a ${goal.duration}-day learning plan for:
+${goal.title}
 
-User goal:
-Title: ${goal.title}
 Description: ${goal.description}
-Duration: ${goal.duration} days
+Category: ${goal.category}
 
-Create a clear day-wise learning plan.
-Give exactly ${goal.duration} daily tasks.
-Each task should be short and actionable.
+Give a day-wise plan.
 `;
 
-    const result = await model.generateContent(prompt);
-    const response = result.response.text();
+    const completion = await client.chat.completions.create({
+      model: "openai/gpt-4o-mini",
+      messages: [
+        { role: "system", content: "You are a helpful learning planner." },
+        { role: "user", content: prompt }
+      ]
+    });
 
-    res.json({ plan: response });
-  } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.json({
+      plan: completion.choices[0].message.content
+    });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
   }
 };
