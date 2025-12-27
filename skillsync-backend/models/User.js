@@ -35,6 +35,11 @@ const userSchema = new mongoose.Schema({
   lastActive: {
     type: Date,
     default: Date.now
+  },
+
+  badges: {
+    type: [String],
+    default: []
   }
 
 }, { timestamps: true });

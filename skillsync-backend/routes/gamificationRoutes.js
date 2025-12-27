@@ -1,7 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const gamificationController = require("../controllers/gamificationController");
+const auth = require("../middleware/authMiddleware");
+const {
+  getStats,
+  getLeaderboard
+} = require("../controllers/gamificationController");
 
-router.get("/stats", gamificationController.getStats);
+router.get("/stats", auth, getStats);
+router.get("/leaderboard", auth, getLeaderboard);
 
 module.exports = router;
