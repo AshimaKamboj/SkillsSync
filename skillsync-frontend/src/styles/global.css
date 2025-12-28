@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: white;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.glow {
+  box-shadow: 0 0 40px rgba(0,255,170,0.15);
+}
+
+.green {
+  color: #2dffb3;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg,#2dffb3,#00e0ff);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+}

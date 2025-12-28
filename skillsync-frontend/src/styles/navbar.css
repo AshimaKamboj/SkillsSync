@@ -1,0 +1,46 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: rgba(10,10,15,0.8);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: var(--green);
+  cursor: pointer;
+}
+
+.nav-links span {
+  margin: 0 20px;
+  cursor: pointer;
+  color: #bbb;
+}
+
+.nav-links span:hover {
+  color: var(--green);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.login {
+  margin-right: 20px;
+  cursor: pointer;
+  color: #ccc;
+}
+
+.nav-actions button {
+  background: linear-gradient(90deg, var(--green), var(--teal));
+  border: none;
+  color: black;
+  padding: 10px 22px;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+}
