@@ -1,70 +1,3 @@
-
-// import { useNavigate } from "react-router-dom";
-// import "../styles/home.css";
-
-// export default function Home() {
-//   const navigate = useNavigate();
-
-//   return (
-//     <div className="home">
-      
-//       {/* Navbar */}
-//       <div className="navbar glass">
-//         <div className="logo">
-//           ⚡ <span>SkillSync</span>
-//         </div>
-
-//         <div className="nav-links">
-//           <span onClick={() => navigate("/dashboard")}>Dashboard</span>
-//           <span onClick={() => navigate("/learn")}>Learn</span>
-//           <span onClick={() => navigate("/leaderboard")}>Leaderboard</span>
-//         </div>
-
-//         <div className="nav-actions">
-//           <span onClick={() => navigate("/login")}>Log in</span>
-//           <button className="btn-primary" onClick={() => navigate("/signup")}>
-//             Get Started
-//           </button>
-//         </div>
-//       </div>
-
-//       {/* Hero */}
-//       <div className="hero">
-//         <div className="ai-tag">✨ AI-Powered Learning</div>
-
-//         <h1>
-//           Level Up Your <br />
-//           <span className="green">Skills</span> Today
-//         </h1>
-
-//         <p>
-//           Gamified learning meets AI. Set goals, complete tasks,
-//           earn XP, and climb the leaderboard. Learning has never been this
-//           <span className="pink"> addictive</span>.
-//         </p>
-
-//         <div className="hero-stats">
-//           <div>⚡ <b>50K+</b> Learners</div>
-//           <div>🔥 <b>1M+</b> Tasks</div>
-//           <div>🏆 <b>500+</b> Paths</div>
-//         </div>
-
-//         <div className="hero-buttons">
-//           <button className="btn-primary" onClick={() => navigate("/signup")}>
-//             Start Learning Free →
-//           </button>
-
-//           <button className="btn-outline" onClick={() => navigate("/learn")}>
-//             Explore Courses
-//           </button>
-//         </div>
-//       </div>
-
-//     </div>
-//   );
-// }
-
-
 import { useNavigate } from "react-router-dom";
 import "../styles/home.css";
 
@@ -180,6 +113,38 @@ export default function Home() {
         </div>
       </div>
 
+
+      {/* ============================= */}
+{/* CTA - Ready To Become Unstoppable */}
+{/* ============================= */}
+<div className="cta-section">
+  <div className="cta-card glass">
+    <div className="cta-tag">✨ Start Your Journey</div>
+
+    <h2>
+      Ready to Become <span className="green">Unstoppable?</span>
+    </h2>
+
+    <p>
+      Join thousands of learners who are already crushing their goals.
+      Your future self will thank you.
+    </p>
+
+    <button className="btn-primary cta-btn" onClick={() => navigate("/signup")}>
+      ⚡ Get Started Free →
+    </button>
+
+    <div className="cta-note">
+      No credit card required • Cancel anytime • Unlimited learning
     </div>
+  </div>
+</div>
+
+
+    </div>
+
+    
+    
   );
+  
 }
