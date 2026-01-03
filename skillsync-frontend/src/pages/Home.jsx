@@ -8,7 +8,7 @@ export default function Home() {
     <div className="home">
 
       {/* Navbar */}
-      <div className="navbar glass">
+      {/* <div className="navbar glass">
         <div className="logo">
           ⚡ <span>SkillSync</span>
         </div>
@@ -25,7 +25,7 @@ export default function Home() {
             Get Started
           </button>
         </div>
-      </div>
+      </div> */}
 
       {/* Hero */}
       <div className="hero">
