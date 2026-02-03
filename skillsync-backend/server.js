@@ -19,6 +19,8 @@ app.use("/api/topics", require("./routes/topicRoutes"));
 app.use("/api/tasks", require("./routes/taskRoutes"));
 app.use("/api/ai", require("./routes/aiRoutes"));
 app.use("/api/gamification", require("./routes/gamificationRoutes"));
+app.use("/api/users", require("./routes/userRoutes"));
+
 
 // Test Route
 app.get("/", (req, res) => {
