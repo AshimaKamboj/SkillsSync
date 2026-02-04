@@ -116,9 +116,9 @@
 }
 
 .badge {
-  padding: 16px;
+  /* padding: 16px;
   border-radius: 14px;
-  margin-top: 12px;
+  margin-top: 12px; */
 }
 
 .badge.blue {
